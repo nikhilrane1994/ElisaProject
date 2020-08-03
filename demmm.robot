@@ -4,5 +4,7 @@ Library    DatabaseLibrary
 
 *** Test Cases ***
 Demo
-    Write Data Into Excel    OnlineFirstDataSheet.xlsx    UAT_TestDataSheet    Demo    SearchforanAccountname    Basic1
+     Write Data Into Excel    OnlineFirstDataSheet.xlsx    UAT_TestDataSheet    Demo    SearchforanAccountname    Basic
+    Create File    ${CURDIR}/data.txt   Subscriber : 'SUB074125895'\n
+    Append To File    ${CURDIR}/data.txt    Order : 'ON0478541' 
     
