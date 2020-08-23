@@ -15,18 +15,17 @@ pipeline {
         	always {
 		        script {
 		          step(
-			            [
-			              $class              : 'RobotPublisher',
-			              outputPath          : 'reports',
-			              outputFileName      : '**/output.xml',
-			              reportFileName      : '**/report.html',
-			              logFileName         : '**/log.html',
-			              disableArchiveOutput: false,
-			              passThreshold       : 50,
-			              unstableThreshold   : 40,
-			              otherFiles          : "**/*.png,**/*.jpg",
-			            ]
-		          	)
+				[
+							$class : 'RobotPublisher',
+							outputPath : outputDirectory,
+							outputFileName : "*.xml",
+							disableArchiveOutput : false,
+							passThreshold : 100,
+							unstableThreshold: 95.0,
+							onlyCritical : true,
+							otherFiles : "*.png",
+					]
+				)
 		        }
 	  		}		
 	    }
