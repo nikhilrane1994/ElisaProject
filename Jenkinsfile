@@ -2,7 +2,9 @@ pipeline {
   agent any
   stages {
 	    stage('intialize') {
-			echo "hello"
+		    steps {
+		        	echo 'hello'
+	      		}
 	    }
     
 	    stage('Run Robot Tests') {
