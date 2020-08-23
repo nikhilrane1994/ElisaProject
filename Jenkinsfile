@@ -16,14 +16,14 @@ pipeline {
 		        script {
 		          step(
 				[
-							$class : 'RobotPublisher',
-							outputPath : outputDirectory,
-							outputFileName : "*.xml",
-							disableArchiveOutput : false,
-							passThreshold : 100,
-							unstableThreshold: 95.0,
-							onlyCritical : true,
-							otherFiles : "*.png",
+				$class : 'RobotPublisher',
+outputPath : outputDirectory,
+outputFileName : "*.xml",
+disableArchiveOutput : false,
+passThreshold : 100,
+unstableThreshold: 95.0,
+onlyCritical : true,
+otherFiles : "*.png",
 					]
 				)
 		        }
